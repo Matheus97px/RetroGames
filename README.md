@@ -9,8 +9,6 @@ Este é um projeto de e-commerce de jogos desenvolvido como parte do bootcamp **
 - **Node.js**
 - **NestJS**
 - **TypeORM**
-- **PostgreSQL**
-- **Class Validator**
 - **Insomnia** (para testes de API)
 
 ---
@@ -39,14 +37,6 @@ Este é um projeto de e-commerce de jogos desenvolvido como parte do bootcamp **
 - ✅ Cadastrar, listar, buscar, atualizar e deletar jogos
 - ✅ Controlar estoque e valores
 - ✅ Registrar fabricantes, gêneros e plataformas
-- ✅ Realizar venda e compra de unidades (estoque)
 - ✅ Relacionar jogo com gênero, fabricante e plataforma
 
 ---
-
-## 📦 Instalação Local
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
-   cd nome-do-repositorio
