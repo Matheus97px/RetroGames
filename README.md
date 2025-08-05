@@ -16,7 +16,7 @@ Este é um projeto de backend de uma loja de jogos desenvolvido como parte do bo
 ## 📁 Estrutura de Entidades
 
 - `Jogo` – Entidade principal com sinopse, preço, estoque e relacionamentos
-- `Fabricante` – Empresa responsável pela fabricação do jogo
+- `Fabricante` – Empresa responsável pela fabricação do jogo ou console (ou os 2 )
 - `Plataforma` – Consoles ou sistemas nos quais o jogo roda
 - `Gênero` – Categoria (ex: Aventura, RPG, Luta, etc.)
 
