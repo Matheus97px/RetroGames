@@ -1,6 +1,6 @@
 # 🎮 Backend de uma Loja de Jogos Retrô - RetroGames – Projeto Generation
 
-Este é um projeto de e-commerce de jogos desenvolvido como parte do bootcamp **Tech Fullstack JavaScript** da **Generation Brasil**. O sistema permite o cadastro e a gestão de jogos retrô, com controle de fabricantes, plataformas, gêneros e estoque.
+Este é um projeto de backend de uma loja de jogos desenvolvido como parte do bootcamp **Tech Fullstack JavaScript** da **Generation Brasil**. O sistema permite o cadastro e a gestão de jogos retrô, com controle de fabricantes, plataformas, gêneros e estoque.
 
 ---
 
