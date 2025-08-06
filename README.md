@@ -29,7 +29,7 @@ Este é um projeto de backend de uma loja de jogos desenvolvido como parte do bo
   - um `Gênero`
   - uma `Plataforma`
 - `Plataforma`tem um `Fabricante`
-- 
+  
 <img width="1240" height="524" alt="image" src="https://github.com/user-attachments/assets/361359d6-baac-4b11-8bd6-058f79bc8986" />
 
 ---
