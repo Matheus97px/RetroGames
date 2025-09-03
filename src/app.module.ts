@@ -13,22 +13,15 @@ import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 import { User } from './user/entities/user.module';
 import { AppController } from './app.controller';
+import { ProdService } from './data/services/prod.service';
+import { DevService } from './data/services/dev.service';
 @Module({
   imports: [
-    ConfigModule.forRoot({
-      isGlobal: true, // Torna as variáveis disponíveis globalmente
-    }),
-    TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: process.env.DB_HOST,
-      port: parseInt(process.env.DB_PORT ?? '3306', 10),
-      username: process.env.DB_USERNAME,
-      password: process.env.DB_PASSWORD,
-      database: process.env.DB_NAME,
-      entities: [Jogo, Genero, Plataforma, Fabricante, User],
-      synchronize:  process.env.NODE_ENV === 'development',
-      logging:  process.env.NODE_ENV === 'development'
-    }),
+   ConfigModule.forRoot(),
+  TypeOrmModule.forRootAsync({
+	useClass: DevService,
+    imports: [ConfigModule],
+}),
     JogoModule, GeneroModule , PlataformaModule , FabricanteModule , AuthModule , UserModule
   ],
   controllers: [AppController],
