@@ -1,9 +1,14 @@
-import { Controller, Get, HttpStatus, HttpCode, Param, ParseIntPipe, Post, Body, Put, Delete } from "@nestjs/common";
+import { Controller, Get, HttpStatus, HttpCode, Param, ParseIntPipe, Post, Body, Put, Delete, UseGuards } from "@nestjs/common";
 import { FabricanteService } from "../services/fabricante.service";
 import { Fabricante } from "../entities/fabricante.entity";
+import { JwtAuthGuard } from "../../auth/guard/jwt-auth.guard";
+import { ApiBearerAuth, ApiTags } from "@nestjs/swagger";
 
 
+@ApiTags('Fabricante')
+@UseGuards(JwtAuthGuard)
 @Controller('/fabricante')
+@ApiBearerAuth()
 export class FabricanteController {
     constructor(private readonly fabricanteService: FabricanteService) {}
 

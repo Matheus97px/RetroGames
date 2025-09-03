@@ -18,14 +18,14 @@ export class JogoService {
 
     async findAll(): Promise<Jogo[]> {
         return this.jogoRepository.find({
-            relations: { genero: true, plataforma: true, fabricante: true }
+            relations: { genero: true, plataforma: true, fabricante: true, user: true }
         });
     }
 
     async findById(id: number): Promise<Jogo> {
         const jogo = await this.jogoRepository.findOne({
             where: { id },
-            relations: { genero: true, plataforma: true, fabricante: true }
+            relations: { genero: true, plataforma: true, fabricante: true , user: true}
         });
 
         if (!jogo) {
@@ -40,7 +40,7 @@ export class JogoService {
             where: {
                 titulo: ILike(`%${titulo}%`)
             },
-            relations: { genero: true, plataforma: true, fabricante: true }
+            relations: { genero: true, plataforma: true, fabricante: true , user: true}
         })
     }
 

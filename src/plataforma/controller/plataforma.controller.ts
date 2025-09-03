@@ -1,9 +1,14 @@
-import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, ParseIntPipe, Post, Put } from "@nestjs/common";
+import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, ParseIntPipe, Post, Put, UseGuards } from "@nestjs/common";
 import { PlataformaService } from "../services/plataforma.service";
 import { Plataforma } from "../entities/plataforma.entity";
+import { JwtAuthGuard } from "../../auth/guard/jwt-auth.guard";
+import { ApiBearerAuth, ApiTags } from "@nestjs/swagger";
 
 
+@ApiTags('Plataforma')
+@UseGuards(JwtAuthGuard)
 @Controller('/plataformas')
+@ApiBearerAuth()
 export class PlataformaController {
     constructor(private readonly plataformaService: PlataformaService) { }
 

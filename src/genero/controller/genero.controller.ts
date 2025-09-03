@@ -1,9 +1,14 @@
-import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, ParseIntPipe, Post, Put } from "@nestjs/common";
+import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, ParseIntPipe, Post, Put, UseGuards } from "@nestjs/common";
 import { GeneroService } from "../services/genero.service";
 import { Genero } from "../entities/genero.entity";
+import { JwtAuthGuard } from "../../auth/guard/jwt-auth.guard";
+import { ApiBearerAuth, ApiTags } from "@nestjs/swagger";
 
 
+@ApiTags('Genero')
+@UseGuards(JwtAuthGuard)
 @Controller('/generos')
+@ApiBearerAuth()
 export class GeneroController {
     constructor(private readonly generoService: GeneroService) { }
 
